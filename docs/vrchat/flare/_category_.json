@@ -1,0 +1,8 @@
+{
+  "label": "Flare",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Documentation and usage guide for my tool Flare"
+  }
+}

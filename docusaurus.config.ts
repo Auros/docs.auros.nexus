@@ -55,6 +55,12 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
+          sidebarId: 'vrchatSidebar',
+          position: 'left',
+          label: 'VRChat',
+        },
+        {
+          type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Tutorial',
@@ -74,8 +80,12 @@ const config: Config = {
           items: [
             {
               label: 'Tutorial',
-              to: '/docs/intro',
+              to: '/docs/tutorial/intro',
             },
+            {
+              label: 'VRChat',
+              to: '/docs/vrchat/intro',
+            }
           ],
         },
         {
@@ -84,10 +94,6 @@ const config: Config = {
             {
               label: 'Bluesky',
               href: 'https://bsky.app/profile/auros.nexus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
             },
             {
               label: 'Twitter',
@@ -100,7 +106,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/Auros',
             },
           ],
         },

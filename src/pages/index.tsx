@@ -36,7 +36,7 @@ export default function Home() {
       description="Documentation for all of the software I write and release to the internet.">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+          {/* <HomepageFeatures /> */}
       </main>
     </Layout>
   );

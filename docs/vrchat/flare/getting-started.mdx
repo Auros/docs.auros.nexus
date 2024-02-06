@@ -1,0 +1,95 @@
+---
+sidebar_position: 2
+---
+
+import ReactPlayer from 'react-player'
+
+# Getting Started
+
+Welcome to Flare! Using this tool you can create toggles, menus, and rules to control effects on your avatar.
+
+## Create Your First Menu
+
+Under your avatar hierarchy, create a new GameObject and add a FlareMenu component. Any controls that are a child of
+the menu will be put in a sub menu! You can nest menus together too.
+
+<ReactPlayer controls url={'/video/flare/create-menu.mp4'} />
+
+## Create Your First Control
+
+Let's create your first control. To give a quick showcase, we are going to create a simple control
+that toggles the hairpin on this avatar on and off.
+
+<ReactPlayer controls url={'/video/flare/create-toggle-control.mp4'} />
+
+The steps shown in the video are as followed:
+1. Create a new `FlareControl` within your avatar's GameObject (ideally within a FlareMenu).
+2. Assign the default toggle value to `True`.
+    1. We want set this to true because we want the hairpin to be on the avatar by default (whenever we load into the
+    avatar, or reset the avatar).
+3. Create a new Object Toggle slot.
+4. Add the hairpin's `GameObject` to the Object Toggle.
+
+Object toggles are presented using the pattern "This `Target` should be `Enabled / Disabled` when this
+menu item is `Enabled / Disabled`". If you don't understand how this works, try saying the condition out loud!
+
+Here is what the control looks like when emulated with GestureManager.
+
+<ReactPlayer controls url={'/video/flare/showcase-toggle-control.mp4'} />
+
+:::tip
+Try setting the default value before adding toggles. It will try to predict the toggle settings you'll most likely want.
+:::
+
+## Create Your First Radial
+
+Now let's create a pretty useful control: Minimum Brightness. Often in worlds the lighting may make your avatar too
+dark, and you'd like to fix that. Flare can cover that use case.
+
+<ReactPlayer controls url={'/video/flare/create-min-brightness-slider.mp4'} />
+For this video I changed the scene lighting to better reflect the brightness slider.
+
+Creating a minimum brightness slider seems like a couple steps, but let's break it down.
+1. Create a new `FlareControl`.
+2. Set the menu type to `Radial`.
+3. Create a new Property Group.
+    1. Property Groups allow you to control individual properties on the avatar. This is primarily used for setting
+    blendshape and material values.
+4. Set the Property Group Selection Mode to `Avatar`.
+    1. `Normal` only searches the GameObject provided in the `Target Objects` array, and will only animate the specific
+    property you select.
+    2. `Avatar` will animate any property on the entire avatar with the name of the property you select, except for
+    objects provided to the `Objects To Exclude` array.
+5. Create a new Property.
+6. Select the minimum brightness shader property for all the material(s) on the avatar.
+7. Set the Target Value to 1
+
+:::warning
+For some shaders like Poiyomi, you may need to allow the property to be animated for the property to animate after
+the shader locks.
+:::
+
+# Combining Toggles and Properties
+Avatars will often have shrink blendshapes that are used to hide parts of the model while clothing is active. Flare can
+make creating these kinds of toggles a breeze.
+
+In the following example, the legs on the model are shrunk using blendshapes by default. When we want to toggle the
+stockings off, we want to remove the leg shrinking while also disabling the stockings.
+
+<ReactPlayer controls url={'/video/flare/stockings-control.mp4'} />
+
+1. Create a new `FlareControl`.
+2. Set the Default Toggle Value to True.
+    1. We do this because the default state for the stockings should be on. It's up to you how you handle this.
+3. Create a new Object Toggle.
+4. Assign the stockings GameObject/Mesh to the toggle slot.
+5. Create a new Property Group.
+6. Add the body mesh to the `Target Objects` array, so Flare knows which object(s) to animate.
+7. Create a new Property.
+8. Select the shrink blendshape for the stockings.
+9. Set the default value to 0, as we want the legs to be visible `When Inactive`.
+
+And it's as simple as that! After a small amount of practice, you can make your own complex toggles, radials,
+and buttons with swiftness and ease, hopefully dramatically reducing the time it takes for avatar iteration.
+
+To go more in-depth on Flare's features, check the sidebar or go to the Next Page.
