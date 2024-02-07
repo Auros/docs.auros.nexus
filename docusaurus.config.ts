@@ -30,10 +30,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/Auros/docs.auros.nexus/tree/main',
+          routeBasePath: '/'
         },
         blog: false,
         theme: {
@@ -80,11 +77,11 @@ const config: Config = {
           items: [
             {
               label: 'Tutorial',
-              to: '/docs/tutorial/intro',
+              to: '/tutorial/intro',
             },
             {
               label: 'VRChat',
-              to: '/docs/vrchat/intro',
+              to: '/vrchat/intro',
             }
           ],
         },
