@@ -11,7 +11,7 @@ A non-destructive tool applies changes to your model only when you enter play mo
 Please check out [Modular Avatar](https://modular-avatar.nadena.dev/),
 [Gesture Manager](https://github.com/BlackStartx/VRC-Gesture-Manager),
 and [d4rk's Avatar Optimizer](https://github.com/d4rkc0d3r/d4rkAvatarOptimizer).
-I personally use both for my avatar setup, and they are both extremely
+I personally use all of them for my avatar setup, and they are both extremely
 powerful and enable me to quickly iterate on avatars and make them optimized.
 
 My workflow starts in Blender and I move over to Unity, trying to keep as many things as non-destructive as possible.
@@ -30,7 +30,7 @@ NDMF is that you can choose to customize your avatar pipeline.
 If Flare doesn't meet the needs of your project, feel free to submit an
 [issue on GitHub](https://github.com/Auros/Flare/issues), [contribute to the project](https://github.com/Auros/Flare),
 or use another tool like [Vixen](https://docs.hai-vr.dev/docs/products/vixen) (the inspiration for flare), or
-[VRCFury](https://vrcfury.com/). 
+[VRCFury](https://vrcfury.com/).
 
 ## How does Flare handle the animator?
 Flare uses a Direct Blend Tree for normal toggles and value smoothing. It uses two layers to calculate frame time

@@ -11,17 +11,9 @@ the component becomes trivial to work with.
 
 ![Flare Control](img/flare-control.png)
 
-## Anatomy
-Each FlareControl has a parameter that drives it, and it can be represented as a value of 0 to 1.
-When "the control" is at 0, it is inactive. When the control is at 1, it is active. For Radials,
-PhysBones, and Contacts, that value can be somewhere in between.
-
-Every control has section for the selected control type, object toggles, and property groups. You can learn
-more about each one of those below.
-
 ## Stateful
 This is important. When working with Flare Controls, you will see two words highlighted in green and red
-respectively, "Active" and "Inactive". For every toggle or property you setup, there will be one Active/Inactive
+respectively, "Active" and "Inactive". For every toggle or property you set up, there will be one Active/Inactive
 value you can change. The opposite of that state how your avatar is **currently** in the editor.
 
 As an example, you can have a toggle that disables an object when it is `Inactive`. Let's say this object is the
@@ -29,11 +21,19 @@ avatar's shirt. In the editor, it's enabled. Flare will interpret the object bei
 the object being enabled when it's `Active`. You can override this to be a value you pick if you don't want to rely
 on the editor state for your controls.
 
+## Anatomy
+Each `FlareControl` has a parameter that drives it, and that parameter can be represented as a value from 0 to 1.
+When "the control" is at 0, it is inactive. When the control is at 1, it is active. For Radials,
+PhysBones, and Contacts, that value can be somewhere in between.
+
+Every control has section for the selected control type, object toggles, and property groups. You can learn
+more about each one of those below.
+
 ## Type
 The type of the control. This determines how the control is represented on the avatar.
 * **Menu** - Creates a (synced) menu item.
 * **PhysBone** - Drive a control using a PhysBone parameter. 
-  This includes Stretch, Squish, IsPosed, IsGrabbed, and Angle
+  This includes Stretch, Squish, IsPosed, IsGrabbed, and Angle.
 * **Contact** - Drive a control using a contact receiver.
 
 ## Duration
@@ -42,7 +42,6 @@ Interpolate your control. This value is in seconds. The control will take (durat
 effects, and gradual activations.
 
 ## Controls
-There are multiple control types.
 
 ### Menu Item
 This will be the control you use most often (most likely). It creates a menu control on your avatar which
@@ -107,9 +106,9 @@ most component properties). Properties are put into groups which determine how i
     property.
 * `Target Objects`
   * When in `Normal` mode, the objects provided in here are used entirely for searching and selecting the properties
-  * provided.
+    provided.
 * `Objects To Exclude`
-  * When in `Avatar` mode, the property animator will skip these over the objects provided.
+  * When in `Avatar` mode, the property animator will skip over the objects provided.
 
 ### Property
 
