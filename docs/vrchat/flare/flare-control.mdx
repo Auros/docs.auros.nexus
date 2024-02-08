@@ -2,12 +2,14 @@
 sidebar_position: 4
 ---
 
+import ReactPlayer from "react-player";
+
 # Flare Control
 
 The Flare Control is the heart of this tool. There are multiple parts to it, but once they're understood
 the component becomes trivial to work with.
 
-(picture here lol)
+![Flare Control](img/flare-control.png)
 
 ## Anatomy
 Each FlareControl has a parameter that drives it, and it can be represented as a value of 0 to 1.
@@ -54,7 +56,7 @@ you can control in game.
 * `Is Saved` - Is the state of this control persisted through world changes, avatar changes, and avatar resets?
 * `Default Value` (Toggle and Radial) - The default value of the control.
 
-(picture)
+![Flare Menu Item](img/flare-control-menu.png)
 
 ### PhysBone
 Allows you to drive the control's value with a PhysBone parameter.
@@ -67,14 +69,12 @@ Allows you to drive the control's value with a PhysBone parameter.
   * `Is Posed`
   * `Angle`
 
-(picture)
+![Flare Menu Item](img/flare-control-physbones.png)
 
 ### Contact
 Allows you to drive the control's value with a Contact Receiver.
 * `Contact Receiver` - The Contact Receiver to use.
     * If this Contact Receiver already has a parameter assigned to it, Flare will use that instead of generating its own.
-
-(picture)
 
 ## Object Toggles
 Toggles let you set the activity of a GameObject, Behaviour, or a Renderer. It is called the `Target`.
@@ -87,8 +87,6 @@ If your Default Toggle Value is `ON` (when your menu is `Active`) and you drag i
 it will configure the toggle to be disabled when the menu is `Inactive`. You can manually configure the toggle state
 to follow the exact condition.
 
-(picture)
-
 Each toggle follows a simple sentence structure: `This [Target] should be [Enabled / Disabled]
 when the menu item is [Active / Inactive]`. If you're unsure on what a toggle does, just read it out loud
 until it makes sense.
@@ -96,9 +94,7 @@ until it makes sense.
 Each toggle uses the Editor state for the "opposite/default" value. If you want to override this behaviour,
 you can enable `Override Default Value` in the context menu of the toggle.
 
-(picture)
-
-Find more examples on the examples page. (todo add examples link)
+Find more examples on the [examples page](/vrchat/flare/examples).
 
 ## Property Groups
 Property groups allow you to control any animatable properties on the avatar (Materials, Blendshapes, PhysBones, 
@@ -119,7 +115,7 @@ most component properties). Properties are put into groups which determine how i
 
 Properties in Flare support booleans, integers, floats, vectors, and colors.
 
-(video of selecting a property)
+<ReactPlayer controls url={'/video/flare/property-group-selector.mp4'} />
 
 * `Current Value` (Readonly) - The current value of the property Editor. This is also the value of the **opposite** of
     the control state.
@@ -132,6 +128,6 @@ Properties in Flare support booleans, integers, floats, vectors, and colors.
 If you don't want to use the `Current Value` (the Editor value) as the opposite/default value,
 you can enable `Override Default Value` in the context menu for each property.
 
-(picture)
+![Flare Menu Item](img/flare-control-property-group-single.png)
 
-That's it (for now)! Check out the examples over on the example page to see some of the things you can make.
+That's it (for now)! Check out the examples over on the [examples page](/vrchat/flare/examples). to see some of the things you can make.

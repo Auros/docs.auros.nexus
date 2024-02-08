@@ -8,7 +8,7 @@ sidebar_position: 6
 
 You can add a `FlareSettings` component somewhere in your avatar to configure one (1) setting.
 
-(picture)
+![Flare Settings](img/flare-settings.png)
 
 ### Use Write Defaults
 

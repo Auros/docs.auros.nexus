@@ -23,4 +23,4 @@ You can add as many rules as possible.
 You can TOTALLY make recursive rules. I don't recommend you do so (idk what'll happen)
 :::
 
-(picture)
+![Flare Tags](img/flare-tags.png)

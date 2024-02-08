@@ -57,12 +57,6 @@ const config: Config = {
           label: 'VRChat',
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {
           href: 'https://github.com/Auros',
           label: 'GitHub',
           position: 'right',
@@ -75,10 +69,6 @@ const config: Config = {
         {
           title: 'Docs',
           items: [
-            {
-              label: 'Tutorial',
-              to: '/tutorial/intro',
-            },
             {
               label: 'VRChat',
               to: '/vrchat/intro',

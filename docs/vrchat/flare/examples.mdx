@@ -52,19 +52,19 @@ Best used for:
 * Thinner pants
 * Clothing you experience clipping with
 
-
+<ReactPlayer controls url={'/video/flare/example-toggle-blendshape-shrink-default-off.mp4'} />
 
 ---
 
 ### Multiple Toggle Elements
 
-
+<ReactPlayer controls url={'/video/flare/example-toggle-multiple.mp4'} />
 
 ---
 
 ### Sword Toggle
 
-
+<ReactPlayer controls url={'/video/flare/example-toggle-sword.mp4'} />
 
 ---
 
@@ -72,25 +72,30 @@ Best used for:
 Best used for:
 * When you only want to swap from one object to another
 
-
+<ReactPlayer controls url={'/video/flare/example-toggle-swap.mp4'} />
 
 ---
 
 ### Duration (Interpolation)
 
-
+<ReactPlayer controls url={'/video/flare/example-toggle-duration.mp4'} />
 
 ---
 
-### AudioLink Toggle
+### AudioLink Toggle (Poiyomi)
 
+:::warning
+Check to make sure if your shaders have an Animate Property option (like Poiyomi).
+Otherwise, the property might not animate after your shaders lock.
+:::
 
+<ReactPlayer control url={'/video/flare/example-toggle-audiolink.mp4'} />
 
 ---
 
 ### Disable PhysBones (GameObject)
 
-
+<ReactPlayer control url={'/video/flare/example-toggle-disable-physbone-gameobject.mp4'} />
 
 ---
 
@@ -99,13 +104,7 @@ If your setup requires you to have the GameObject enabled (for... some reason),
 you can target the enabled property on the specific component. This works for any
 Renderer and Behaviour based Component.
 
-
-
----
-
-### Disable All PhysBones
-
-
+<ReactPlayer controls url={'/video/flare/example-toggle-disable-physbone-component.mp4'} />
 
 ---
 
@@ -113,19 +112,31 @@ Renderer and Behaviour based Component.
 
 ### Minimum Brightness Slider
 
+:::warning
+Check to make sure if your shaders have an Animate Property option (like Poiyomi).
+Otherwise, the property might not animate after your shaders lock.
+:::
 
+<ReactPlayer controls url={'/video/flare/example-radial-brightness.mp4'} />
 
 ---
 
 ### Minimum Brightness Slider (Override)
 
+:::warning
+Check to make sure if your shaders have an Animate Property option (like Poiyomi).
+Otherwise, the property might not animate after your shaders lock.
+:::
 
+If you don't want to rely on the Editor value of the material, you can override the value.
+
+<ReactPlayer controls url={'/video/flare/example-radial-brightness-override.mp4'} />
 
 ---
 
 ### Breast Slider (Exclusive)
 
-
+<ReactPlayer controls url={'/video/flare/example-radial-breasts-exclusive.mp4'} />
 
 ---
 
@@ -134,27 +145,16 @@ Some models have conventions for the name of blendshapes like the breasts that o
 so they can be easier to animate in bulk. You can use the `Avatar` Selection Mode to animate all values that match
 the breast blendshape.
 
-
+<ReactPlayer controls url={'/video/flare/example-radial-breasts-inclusive.mp4'} />
 
 ---
 
 ### Scale Transform
 
-
-
----
-
-### Hue Shift
-
-
-
----
+<ReactPlayer controls url={'/video/flare/example-radial-scale.mp4'} />
 
 ## PhysBones
 
-
-
----
-
 ### Grab Hair Effect
 
+<ReactPlayer controls url={'/video/flare/example-physbone-stretch.mp4'} />
